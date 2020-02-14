@@ -1,0 +1,142 @@
+$onbackgroundColorLight:black;
+$onbackgroundColorDark: white;
+$primaryColor: #f7a90c;
+$primaryColorLight:#ffba2e;
+$primaryColorDark: #ad7400;
+$secondaryColor: #ffffff;
+$secondaryColorLight: rgb(32, 32, 30);
+$secondaryColorDark: #9d5902;
+
+html,body{
+  height: 100%;
+  background: #e6e6e6;
+}
+body{
+  #body{
+    height: 100%;
+    background: #e6e6e6;
+    header{
+      background-color: $onbackgroundColorLight;
+      height: 111px;
+      padding: 8px;
+      width: 100%;
+      h5:first-child{
+        color: $onbackgroundColorDark;
+        display: inline-block;
+        font-size: 40px;
+        font-style: normal;
+      }
+
+      .custom-card{
+        display: inline-block;
+        position: absolute;
+        right: 9px;
+        top: 17px;
+        width: 220px;
+        height: 107px;
+        div{
+          height: 100%;
+          .col-md-4{
+            width: 32%;
+          }
+          .col-md-8{
+            width: 55%;
+          }
+        }
+      }
+    }
+  }
+
+  .custom-card2{
+    width: 23%;
+    margin: 1%;
+  }
+}
+
+/*home*/
+
+
+
+.prim-btn{
+  background-color: $primaryColor;
+  border-radius: 5px;
+  color: $onbackgroundColorDark;
+  font-size: 15px;
+  padding: 13px 30px 13px 30px;
+}
+
+
+/**media queries**/
+/**
+media queries
+*/
+
+@media(max-width: 1300px){
+
+  body{
+    .custom-card2{
+      width: 48%;
+    }
+  }
+}
+
+@media(max-width: 598px){
+
+  body{
+    .custom-card2{
+      width: 98%;
+    }
+  }
+}
+
+@media(max-width: 476px){
+  body{
+    #body{
+
+      header{
+        height: 115px;
+        h5:first-child{
+          display: block;
+          font-size: 30px;
+        }
+      }
+
+      .custom-card{
+        display: inline-block;
+        position: absolute;
+        right: 3%;
+        top: 44px;
+        width: 220px;
+        height: 107px;
+        div{
+          height: 100%;
+          .col-md-4{
+            width: 32%;
+          }
+          .col-md-8{
+            width: 55%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 380px){
+  body{
+    #body{
+      header{
+        height: 115px;
+        h5:first-child{
+          font-size: 25px;
+        }
+        .custom-card{
+            right: 2px;
+            top: 41px;
+            width: 215px;
+            height: 83px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,137 @@
+$onbackgroundColorLight:black;
+$onbackgroundColorDark: white;
+$primaryColor: #f7a90c;
+$primaryColorLight:#ffba2e;
+$primaryColorDark: #ad7400;
+$secondaryColor: #ffffff;
+$secondaryColorLight: #e1e1e1;
+$secondaryColorDark: rgba(0,0,0,0.8);
+
+
+html,body{
+  background-color: $secondaryColor;
+  height: 100%;
+  margin: 0;
+  position: relative;
+}
+
+#background{
+  background: url("https://chiefwritingwolf.files.wordpress.com/2015/09/old-covered-books-hd-wallpaper-1024x683.jpg");
+  background-size: cover;
+  background-repeat: repeat-y;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+#loginbody{
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+  z-index: 2;
+  background-color: $secondaryColor;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 3px $secondaryColorDark;
+  font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+  font-size: 18px;
+  height: 500px;
+  margin: 5% 30% 0 30%;
+  padding: 2% 4% 0 4%;
+  position: absolute;
+
+  p:first-child{
+    color: $primaryColorDark;
+    font-size: 30px;
+    text-decoration: none;
+  }
+
+  p{
+    font-size: 20px;
+    text-decoration: underline;
+  }
+
+  input{
+    margin-bottom: 15px;
+  }
+
+  input[type=email],input[type=password],input[type=text]{
+    background-color: $secondaryColorLight;
+    border: none;
+    border-radius: 2px;
+    height: 40px;
+    width: 90%;
+  }
+
+  input[type=email]:hover,input[type=password]:hover,input[type=text]:hover{
+    border-bottom: 2px solid $primaryColor;
+  }
+
+  button{
+    background-color: $primaryColor;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 1px 3px $secondaryColorDark;
+    color: $onbackgroundColorDark;
+    height: 40px;
+    margin-left: 25%;
+    width: 40%;
+  }
+
+  a{
+    font-size: 15px;
+    color: $primaryColor;
+    display: inline-block;
+    margin-top: 30px;
+    text-decoration: underline;
+  }
+  p:last-child{
+    font-size: 15px;
+    text-decoration: none;
+  }
+}
+
+
+
+@media(max-width: 950px){
+  #loginbody{
+    margin: 15% 10% 0 10%;
+    padding: 2% 4% 0 4%;
+  }
+}
+
+@media(max-width: 680px){
+  #loginbody{
+    margin: 25% 5% 0 5%;
+    padding: 2% 3% 0 11%;
+  }
+}
+
+@media(max-width: 430px){
+  #loginbody{
+    height: 370px;
+    margin: 15% 5% 0 5%;
+    padding: 2% 3% 0 11%;
+
+    p:first-child{
+      font-size: 25px;
+    }
+    p{
+      font-size: 15px;
+    }
+
+    input[type=email],input[type=password],input[type=text]{
+      width: 90%;
+    }
+
+    a{
+      margin-top: 12px;
+    }
+
+    p:last-child{
+      font-size: 12px;
+    }
+
+  }
+}

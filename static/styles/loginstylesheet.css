@@ -1,0 +1,91 @@
+html, body {
+  background-color: #ffffff;
+  height: 100%;
+  margin: 0;
+  position: relative; }
+
+#background {
+  background: url("https://chiefwritingwolf.files.wordpress.com/2015/09/old-covered-books-hd-wallpaper-1024x683.jpg");
+  background-size: cover;
+  background-repeat: repeat-y;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  height: 100%;
+  position: absolute;
+  width: 100%; }
+
+#loginbody {
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+  z-index: 2;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8);
+  font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+  font-size: 18px;
+  height: 500px;
+  margin: 5% 30% 0 30%;
+  padding: 2% 4% 0 4%;
+  position: absolute; }
+  #loginbody p:first-child {
+    color: #ad7400;
+    font-size: 30px;
+    text-decoration: none; }
+  #loginbody p {
+    font-size: 20px;
+    text-decoration: underline; }
+  #loginbody input {
+    margin-bottom: 15px; }
+  #loginbody input[type=email], #loginbody input[type=password], #loginbody input[type=text] {
+    background-color: #e1e1e1;
+    border: none;
+    border-radius: 2px;
+    height: 40px;
+    width: 90%; }
+  #loginbody input[type=email]:hover, #loginbody input[type=password]:hover, #loginbody input[type=text]:hover {
+    border-bottom: 2px solid #f7a90c; }
+  #loginbody button {
+    background-color: #f7a90c;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8);
+    color: white;
+    height: 40px;
+    margin-left: 25%;
+    width: 40%; }
+  #loginbody a {
+    font-size: 15px;
+    color: #f7a90c;
+    display: inline-block;
+    margin-top: 30px;
+    text-decoration: underline; }
+  #loginbody p:last-child {
+    font-size: 15px;
+    text-decoration: none; }
+
+@media (max-width: 950px) {
+  #loginbody {
+    margin: 15% 10% 0 10%;
+    padding: 2% 4% 0 4%; } }
+@media (max-width: 680px) {
+  #loginbody {
+    margin: 25% 5% 0 5%;
+    padding: 2% 3% 0 11%; } }
+@media (max-width: 430px) {
+  #loginbody {
+    height: 370px;
+    margin: 15% 5% 0 5%;
+    padding: 2% 3% 0 11%; }
+    #loginbody p:first-child {
+      font-size: 25px; }
+    #loginbody p {
+      font-size: 15px; }
+    #loginbody input[type=email], #loginbody input[type=password], #loginbody input[type=text] {
+      width: 90%; }
+    #loginbody a {
+      margin-top: 12px; }
+    #loginbody p:last-child {
+      font-size: 12px; } }
+
+/*# sourceMappingURL=loginstylesheet.css.map */

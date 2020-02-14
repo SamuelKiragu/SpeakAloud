@@ -1,0 +1,52 @@
+#bookbody {
+  background: #e6e6e6;
+  height: auto;
+  padding: 25px;
+  /*book*/ }
+  #bookbody a {
+    background: #f7a90c;
+    color: white; }
+  #bookbody .bookcustomcard {
+    width: 300px;
+    height: 200px; }
+    #bookbody .bookcustomcard div {
+      height: 100%; }
+      #bookbody .bookcustomcard div .col-md-4 {
+        width: 32%; }
+      #bookbody .bookcustomcard div .col-md-8 {
+        width: 55%; }
+  #bookbody form h4 {
+    text-decoration: underline; }
+  #bookbody form select {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    margin-bottom: 8px;
+    width: 100px; }
+  #bookbody form textarea {
+    border: none;
+    border-radius: 5px;
+    width: 70%; }
+  #bookbody form .button {
+    background: #f7a90c;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 12px 30px 12px 30px; }
+
+/**media queries**/
+/**
+media queries
+*/
+@media (max-width: 476px) {
+  /*book*/
+  #bookbody form textarea {
+    width: 100%; } }
+@media (max-width: 380px) {
+  #bookbody h4 {
+    font-size: 25px; }
+  #bookbody p {
+    font-size: 16px; } }
+
+/*# sourceMappingURL=bookstylesheet.css.map */

@@ -1,0 +1,75 @@
+{% extends "homelayout.html" %}
+
+{% block title%}
+  speakaloud!
+{% endblock %}
+
+{% block main %}
+<div id="bookbody">
+  <div>
+    <a href="{{url_for('index')}}" class="btn prim-btn">back home</a>
+  {% for book in bookdetails %}
+    <h3 style="">{{book.title}},<span style = "color: #f7a90c;font-size: 15px;">{{book.isbn}}</span></h3>
+    <p>{{book.author}}</p>
+    <p>{{book.year}}</p>
+  {% endfor %}
+  </div>
+
+  <h4 style="text-decoration:underline; display: inline;">goodreads ratings</h4>
+  <img src="https://s.gr-assets.com/assets/icons/goodreads_icon_32x32-6c9373254f526f7fdf2980162991a2b3.png" alt="googlereads" style="display:inline;">
+  <p>Average: {{averagerating}}</p>
+  <p>Number of Ratings Received: {{noofratings}}</p>
+
+  <h4 style="text-decoration:underline;">Reviews</h4>
+  <div class="row">
+    {% if bookreviews.rowcount == 0 %}
+    <div class="card custom-card2">
+      <div class="card-header">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">no review posted yet</h5>
+        <h1>:)</h1>
+      </div>
+    </div>
+    {% else %}
+      {% for review in bookreviews %}
+        <div class="card mb-3 bookcustomcard">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTpV9FDdh_xpL7kn6DkIFo5Bek-092e0UCZvZsd3Aiq2MjLqDw9" class="card-img" alt="..." height="100%">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{review.username}}</h5>
+                <p class="card-text">Rating:{{review.bookrating}}<br>comments:<br>{{review.comment}}</p>
+                <p class="card-text"><small class="text-muted">{{review.datecreated}}</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+
+  {% if error %}
+    <div class="alert alert-danger" role="alert">
+      You can not post a review twice!
+    </div>
+  {% endif %}
+
+    <form action="{{url_for('book')}}" method="POST">
+      <h4>Add a review</h4>
+      <label for="rating">Rating:</label>
+      <select class="" name="rating" required="required">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <br>
+      <textarea class="textarea" name="review" rows="8" cols="" placeholder="enter comment (optional maximum 350 charachter)"></textarea><br>
+      <button class="btn button" name="isbn" value="{{bookno}}">Post</button>
+    </form>
+</div>
+{% endblock %}

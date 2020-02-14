@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/styles/homestylesheet.css">
+    <link rel="stylesheet" href="/static/styles/homestylesheet2.css">
+    <link rel="stylesheet" href="/static/styles/bookstylesheet.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  </head>
+  <body>
+    <div id="body">
+    <header>
+      <h5>{% block title%} {% endblock %}</h5>
+        <div class="">
+            <div class="card mb-3 custom-card" style="">
+              <div class="row no-gutters">
+                <div class="col-md-4">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTpV9FDdh_xpL7kn6DkIFo5Bek-092e0UCZvZsd3Aiq2MjLqDw9" class="card-img" alt="..." height="100%">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h4 class="card-title">{{username}}</h4>
+                    <a href="{{url_for('logout')}}">logout</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </header>
+
+    {% block main %}
+    {% endblock %}
+
+    </div>
+  </body>
+</html>

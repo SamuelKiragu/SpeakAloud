@@ -1,0 +1,42 @@
+{% extends "homelayout.html" %}
+
+{% block title%}
+  speakaloud!
+{% endblock %}
+
+{% block main %}
+<div class="row" style="margin:0;">
+  <div style="width:100%;">
+    <a href="{{url_for('index')}}">go back</a>
+    <span<h5>Results:</h5></span>
+  </div>
+  {% if isResults%}
+    {% for result in bookresults %}
+    <div class="card custom-card2" style="">
+      <div class="card-header">
+        isbn: {{result.isbn}}
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Title: {{result.title}}</h5>
+        <p class="card-text">Author: {{result.author}}</p>
+        <p class="card-text">Year: {{result.year}}</p>
+        <form action="{{url_for('book')}}" method="get">
+          <input type="text" name="bookname" value="{{result.isbn}}" style="display:none">
+          <button class="btn">view more</button>
+        </form>
+      </div>
+    </div>
+    {% endfor %}
+  {% else %}
+  <div class="card custom-card2">
+    <div class="card-header">
+      Error
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Sorry, there is no book with the text searched for</h5>
+      <h3 class="card-title">:(</h3>
+    </div>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

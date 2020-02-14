@@ -1,0 +1,17 @@
+{% extends "homelayout.html"%}
+
+{% block main %}
+<div class="search">
+  <form action="{{url_for('bookresults')}}" method="post">
+    <h1>speakaloud!</h1>
+    <h5>search for a book using the ISBN number, the title, or the author of a book</h5>
+    <input type="text" name="book" placeholder="enter your keyword" required="required"><br>
+    <button>search</button>
+  </form>
+</div>
+<footer class="search">
+  <p>&copy Kiragu</p>
+  <p>Email: samuelkiragu107@gmail.com</p>
+  <p>phone: +254708807844</p>
+</footer>
+{% endblock %}

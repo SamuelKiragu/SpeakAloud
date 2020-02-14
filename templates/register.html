@@ -1,0 +1,15 @@
+{% extends "formtemplate.html" %}
+
+{% block form %}
+<p>speak aloud</p>
+<p>Register</p>
+<form class="" action="{{url_for('register')}}" method="post">
+  <input type="text" name="regusername" placeholder="enter your username" required="required">
+  <input type="email" name="regemail" placeholder="enter your email" required="required">
+  <input type="password" name="regpassword" placeholder="enter your password" required="required">
+  <input type="password" name="confirmpassword" placeholder="confirm your password" required="required">
+  <button>Register</button>
+</form>
+
+<p>do you already have an account? <a href="{{url_for('login')}}">LogIn</a></p>
+{% endblock %}

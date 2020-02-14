@@ -1,0 +1,75 @@
+html, body {
+  height: 100%; }
+
+html body {
+  background: #e6e6e6; }
+
+/*home*/
+.search {
+  background-color: white;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 5px #5e5b5b;
+  height: 300px;
+  margin: 2%;
+  padding: 10px;
+  width: 96%; }
+  .search form {
+    text-align: center; }
+    .search form h5 {
+      color: #9d5902;
+      font-size: 24px; }
+    .search form input[type=text] {
+      background-color: #ffffff;
+      border: 1px solid #f7a90c;
+      border-radius: 6px;
+      height: 35px;
+      margin: 10px;
+      width: 322px; }
+    .search form button {
+      background: #f7a90c;
+      border-radius: 8px;
+      color: #ffffff;
+      font-size: 15px;
+      padding: 12px 30px 12px 30px; }
+
+/*login*/
+body h5 {
+  color: #ad7400;
+  font-size: 18px;
+  font-style: italic; }
+body span h5 {
+  color: black;
+  margin: 10px;
+  font-style: normal; }
+body a {
+  color: #ad7400;
+  margin: 10px; }
+body a:hover {
+  color: #ffba2e; }
+
+.card-body .btn {
+  background-color: #f7a90c;
+  color: #ffffff; }
+
+footer {
+  color: #ad7400;
+  text-align: center;
+  padding: 50px; }
+
+/**media queries**/
+/**
+media queries
+*/
+@media (max-width: 380px) {
+  body .search {
+    margin-top: 5%; }
+    body .search form h1 {
+      font-size: 30px;
+      margin-top: 12px; }
+    body .search form h5 {
+      font-size: 17px; }
+    body .search form input[type=text] {
+      width: 90%; } }
+
+/*# sourceMappingURL=homestylesheet.css.map */
